@@ -13,12 +13,65 @@
 	<!-- Local version -->
 	<link rel="stylesheet" href="simple.css">
 	<!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+	<style>
+	a {
+      text-decoration: none;
+	}
+
+	.container {
+      display: flex;
+      align-items: center;
+	  justify-content: center;
+      gap: 20px; /* Space between the image and the text */
+    }
+
+    .centered-text {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+	.color-change {
+    animation: colorChange 3s infinite;
+  }
+
+  @keyframes colorChange {
+    0% { color: #FF69B4; }
+    25% { color: #FFD700; }
+    50% { color: #8A2BE2; }
+    75% { color: #00BFFF; }
+    100% { color: #FF69B4; }
+  }
+
+  .wave {
+    display: inline-block;
+  }
+
+  .wave span {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+  }
+
+  .wave span:nth-child(1) { animation-delay: 0s; }
+  .wave span:nth-child(2) { animation-delay: 0.1s; }
+  .wave span:nth-child(3) { animation-delay: 0.2s; }
+  .wave span:nth-child(4) { animation-delay: 0.3s; }
+  .wave span:nth-child(5) { animation-delay: 0.4s; }
+
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+	</style>
 </head>
     <body id="top">
 	<header>
 		<h1>Kaia Newman</h1>
-		<p>First year Ph.D. in Software Engineering at Carnegie Mellon University</p>
-		<img src="myface.jpg" alt="Kaia Newman, 2023. A young woman with dark blonde hair." width="300" height="200">
+		<p>Second year Ph.D. in Software Engineering at Carnegie Mellon University</p>
+		<img src="myface.jpg" alt="Kaia Newman, 2023. Someone with glasses and shoulder-length hair." width="300" height="200">
 		<p>If you want to collaborate (or you just want to be pen pals!), please don't hesitate to 
 			reach out to me at <a href="mailto:kaian@cmu.edu">kaian@cmu.edu</a>.</p>
 		<nav>
@@ -34,17 +87,16 @@
 				<header>
 					<h1>About</h1>
 				</header>
-				<p>I'm Kaia Newman, a first year Ph.D. student in Software Engineering in the <a href="https://s3d.cmu.edu/">Software & Societal Systems</a> department at Carnegie Mellon University. 
+				<p>I'm Kaia Newman, a second year Ph.D. student in Software Engineering in the <a href="https://s3d.cmu.edu/">Software & Societal Systems</a> department at Carnegie Mellon University. 
 					I'm advised by <a href="https://andrewbegel.com/">Andrew Begel</a>, and thus am a part of the <a href="https://cmu-variability.github.io/">VariAbility</a> lab.</p>
 
-				<p>My research is on human-centered aspects of software engineering, such as program comprehension, developer productivity and wellbeing, communication in software teams, 
-					and neurodivergent developer accessibility.
-					I am also interested in research aiding other software engineering researchers with their research
-					(e.g., with tools that ensure rigor of empirical methods).
+				<p>My research is on human-centered aspects of software engineering, such as accessibility for neurodivergent developers, program comprehension (especially with sensors or neuroimaging), 
+					developer sense-making, and developer wellbeing and efficacy. I also like to dabble in things I have no current business with
+					 -- right now, a bit of program analysis.
 				</p>
 				
 				<p>I completed my undergraduate degree in Computer Science at the University of Michigan. In my free time, I enjoy written communication, watching the reality TV show <i>Survivor</i>,
-				doing crosswords, running, playing Magic: The Gathering, and easy reading.</p>
+				doing crosswords, running, playing Magic: The Gathering, and reading. I use any pronouns.</p>
 			</article>
 			<article id="updates">
 				<header>
@@ -89,6 +141,11 @@
 			</article>
 			</main>
 	<footer>
+		<div class="container">
+			<img src="stamp.png" alt="Website stamp that says i render therefore i am.">
+			<div class="centered-text"><a href="https://hgouni.com"><div class="color-change"><div class="wave"><span>travel</span> <span>the</span> <span>twitching</span>
+			<span>whiskers</span> <span>webline</span></div></div></a></div>
+		</div>
 		<p>Based on <a href="http://github.com/cbracco/html5-test-page">HTML5-test-page</a> by cbracco.</p>
 	</footer>
 </body>
