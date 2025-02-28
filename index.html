@@ -12,10 +12,24 @@
 	<!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css"> -->
 	<!-- Local version -->
 	<link rel="stylesheet" href="simple.css">
+	<script src="scripts/webline.js" async=""></script>
 	<!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 	<style>
 	a {
       text-decoration: none;
+	}
+	
+	button {
+		background: none; /* No background */
+		border: none; /* No border */
+		color: inherit; /* Inherit text color */
+		cursor: pointer; /* Pointer cursor */
+		font-family: inherit; /* Inherit font */
+		font-size: 16px; /* Font size */
+		font-weight: bold; /* Bold text */
+		padding: 0; /* No padding */
+		display: inline; /* Display as inline */
+		text-decoration: none;
 	}
 
 	.container {
@@ -145,8 +159,16 @@
 	<footer>
 		<div class="container">
 			<img src="stamp.png" alt="Website stamp that says i render therefore i am.">
-			<div class="centered-text"><a href="https://hgouni.com"><div class="color-change"><div class="wave"><span>travel</span> <span>the</span> <span>twitching</span>
-			<span>whiskers</span> <span>webline</span></div></div></a></div>
+			<div class="centered-text">
+				<button onclick="weblineWarp();" title="It's a surprise where you'll end up!">
+					<span class="color-change">
+						<span class="wave">
+							<span>travel</span> <span>the</span> <span>twitching</span>
+							<span>whiskers</span> <span>webline</span>
+						</span>
+					</span>
+				</button>
+			</div>
 		</div>
 		<p>Based on <a href="http://github.com/cbracco/html5-test-page">HTML5-test-page</a> by cbracco.</p>
 	</footer>
