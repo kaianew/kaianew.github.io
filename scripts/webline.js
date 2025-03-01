@@ -1,5 +1,4 @@
 var links = [
-    "https://schare.space",
     "https://hgouni.com",
     "https://veronicapim.github.io/"
 ];
